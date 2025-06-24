@@ -43,6 +43,12 @@ pipeline {
         sh './deploy.sh' 
       }
     }
+
+    stage('Archive') {
+      steps {
+        archiveArtifacts artifacts: 'app.log', fingerprint: true
+      }
+    }
   }
 
   post {
