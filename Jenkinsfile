@@ -4,7 +4,7 @@ pipeline {
   stages {
     stage('Checkout') {
       steps {
-        git 'https://github.com/YOUR-USERNAME/YOUR-PYTHON-REPO.git'
+        git 'https://github.com/SzymonFed/Jenkins_sandbox.git'
       }
     }
 
@@ -24,7 +24,7 @@ pipeline {
       steps {
         sh '''
           . venv/bin/activate
-          pytest tests/
+          pytest
         '''
       }
     }
@@ -40,7 +40,7 @@ pipeline {
       steps {
         echo 'Deploying application...'
         // Add your deployment scripts here, e.g. scp, ssh, or cloud deploy commands
-        // sh './deploy.sh' 
+        sh './deploy.sh' 
       }
     }
   }
