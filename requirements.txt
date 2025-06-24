@@ -1,0 +1,7 @@
+# Core dependencies
+
+# Testing framework
+pytest==7.4.0
+
+# Optional: for code quality or linting
+black==23.9.1
